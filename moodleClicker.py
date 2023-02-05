@@ -83,12 +83,7 @@ def clickStrangePage():
 while(True):
     bot.sleep(3)
 
-    for i in range(5):
-        clickWithScroll()
-    
-    clickStrangePage()
-
-    for i in range(21):
+    for i in range(25):
         clickWithScroll()
 
     clickRestartLoopWithoutScroll()
