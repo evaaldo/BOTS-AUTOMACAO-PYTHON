@@ -9,7 +9,7 @@ def clickWithScroll():
     bot.click(x=1228, y=511)
 
     #intervalo entre páginas
-    bot.sleep(10)
+    bot.sleep(60)
 
 #click para páginas sem scroll
 def clickWithoutScroll():
@@ -54,18 +54,18 @@ def clickRestartLoopWithoutScroll():
     bot.click(x=174, y=203)
     bot.sleep(1)
 
-    #avança para o encontro 15
+    #avança para o encontro 16
     bot.press('pagedown', 2)
     bot.sleep(1)
-    bot.click(x=164, y=303)
+    bot.click(x=182, y=393)
 
-    #intervalo para carregar o encontro 15
+    #intervalo para carregar o encontro 16
     bot.sleep(5)
 
-    #clica na semana 14
+    #clica na semana 16
     bot.press('pagedown', 1)
     bot.sleep(2)
-    bot.click(x=485, y=412)
+    bot.click(x=533, y=413)
 
     #carregando atividades
     bot.sleep(5)
@@ -75,15 +75,24 @@ def clickStrangePage():
     bot.press('pagedown', 1000)
     bot.sleep(1)
     #avança para a próxima página
-    bot.click(x=1236, y=544)
+    bot.click(x=945, y=540)
 
     #intervalo entre páginas
-    bot.sleep(120)
+    bot.sleep(60)
 
 while(True):
     bot.sleep(3)
 
-    for i in range(25):
+    for i in range(2):
+        clickWithScroll()
+
+    for i in range(2):
+        clickStrangePage()
+
+    clickWithScroll()
+    clickStrangePage()
+
+    for i in range(14):
         clickWithScroll()
 
     clickRestartLoopWithoutScroll()
